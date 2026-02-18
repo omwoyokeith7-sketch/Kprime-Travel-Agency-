@@ -3,144 +3,196 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KPrime Travel Agency</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Kprime Travel Agency</title>
+
 <style>
-/* GENERAL STYLES */
-body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6fb;color:#222;}
-a {text-decoration:none;}
-h2,h3{margin-bottom:15px;}
-section {padding:70px 20px;max-width:1200px;margin:auto;}
+body{margin:0;font-family:Segoe UI;background:#f4f6fb;color:#111}
+header{background:linear-gradient(120deg,#081a3a,#1a2f6b);color:#fff;padding:70px 20px;text-align:center}
+header h1{margin:0;font-size:44px}
+header p{opacity:.9}
 
-/* NAVBAR */
-nav {position:fixed;top:0;width:100%;background:white;box-shadow:0 2px 10px rgba(0,0,0,.08);padding:15px 30px;display:flex;justify-content:space-between;align-items:center;z-index:1000;}
-nav b {font-size:20px;color:#0a2a43;}
-nav a {color:#333;margin-left:20px;font-weight:600;transition:.3s;}
-nav a:hover{color:#0f6ea8;}
-.btn-primary {background:#0f6ea8;color:white;padding:10px 20px;border-radius:5px;transition:.3s;}
-.btn-primary:hover{background:#095580;}
-.btn-secondary {background:#555;color:white;padding:10px 20px;border-radius:5px;transition:.3s;}
-.btn-secondary:hover{background:#333;}
+nav{background:#fff;padding:15px;display:flex;justify-content:center;gap:28px;
+box-shadow:0 4px 12px rgba(0,0,0,.05);position:sticky;top:0}
+nav a{text-decoration:none;color:#081a3a;font-weight:600}
 
-/* HERO */
-header {padding:140px 20px 100px;text-align:center;background:linear-gradient(rgba(10,42,67,.7),rgba(10,42,67,.7)),url('');background-size:cover;background-position:center;color:white;}
-header h1 {font-size:48px;margin-bottom:10px;}
-header p {font-size:20px;opacity:.95;}
+section{padding:65px 20px;max-width:1100px;margin:auto}
+h2{color:#081a3a;margin-bottom:18px}
 
-/* CARDS */
-.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px;}
-.card {background:white;padding:30px;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.07);text-align:center;transition:.3s;}
-.card:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(0,0,0,.15);}
-.card i {font-size:36px;color:#0f6ea8;margin-bottom:10px;}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:#fff;padding:22px;border-radius:14px;
+box-shadow:0 8px 18px rgba(0,0,0,.06)}
 
-/* FORMS */
-form {background:white;padding:35px;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.07);max-width:600px;margin:auto;display:flex;flex-direction:column;gap:15px;}
-input,textarea {width:100%;padding:14px;margin:10px 0;border-radius:8px;border:1px solid #ddd;font-size:15px;}
-button {background:#0f6ea8;color:white;padding:15px;border:none;width:100%;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer;transition:.3s;}
-button:hover{background:#095580;}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.gallery img{width:100%;height:180px;object-fit:cover;border-radius:12px}
 
-/* HOTEL GALLERY */
-.gallery {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:30px;}
-.hotel-card {position:relative;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.07);transition:.3s;background:#ddd;height:220px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:18px;color:#555;}
+button,.btn{
+background:#081a3a;color:#fff;border:none;padding:12px 18px;
+border-radius:8px;cursor:pointer;font-weight:600}
 
-/* REVIEWS */
-.reviews {background:#f0f4f8;padding:50px 20px;}
-.review-card {background:white;padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08);margin-bottom:20px;}
-.review-card p{font-style:italic;}
-.review-card b{display:block;margin-bottom:8px;color:#0f6ea8;}
+textarea,input{
+width:100%;padding:12px;margin-top:10px;border-radius:8px;border:1px solid #ccc}
 
-/* FOOTER */
-footer {background:#0a2a43;color:white;text-align:center;padding:40px 20px;}
+.review{background:#fff;padding:14px;border-radius:10px;margin-top:10px;
+box-shadow:0 3px 10px rgba(0,0,0,.05)}
 
-/* WHATSAPP BUTTON */
-.whatsapp {position:fixed;bottom:18px;right:18px;background:#25D366;color:white;padding:16px 18px;border-radius:50%;font-size:22px;text-decoration:none;box-shadow:0 6px 16px rgba(0,0,0,.3);}
+.contact-buttons{display:flex;gap:14px;flex-wrap:wrap}
+.whatsapp{background:#25D366}
+.call{background:#081a3a}
 
-/* RESPONSIVE */
-@media(max-width:768px){header h1{font-size:36px;}nav{flex-direction:column;gap:10px;}}
+footer{background:#081a3a;color:#fff;text-align:center;padding:28px;margin-top:40px}
 </style>
 </head>
+
 <body>
 
-<!-- NAVBAR -->
-<nav>
-<b>KPrime Travel</b>
-<div>
-<a href="#services">Services</a>
-<a href="#booking">Booking</a>
-<a href="#gallery">Hotels</a>
-<a href="#reviews">Reviews</a>
-<a href="#contact">Contact</a>
-</div>
-<a class="btn-primary" href="https://wa.me/254723718279"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-</nav>
-
-<!-- HERO -->
 <header>
-<h1>KPrime Travel Agency</h1>
-<p>Luxury hotel bookings, holidays & unforgettable travel experiences</p>
-<a class="btn-primary" href="https://wa.me/254723718279">Book Now on WhatsApp</a>
-<a class="btn-secondary" href="mailto:Kprime.travel.ke@gmail.com">Email Us</a>
+<h1>Kprime Travel Agency</h1>
+<p>Luxury hotel bookings • Diani vacations • Seamless travel planning</p>
 </header>
 
-<!-- SERVICES -->
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#gallery">Gallery</a>
+<a href="#booking">Booking</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+<h2>About Us</h2>
+<p>
+Kprime Travel Agency specializes in premium hotel bookings and curated travel
+experiences across Kenya — especially Diani Beach.  
+We help clients secure trusted stays, luxury getaways, and stress-free travel arrangements
+with fast response and personalized support.
+</p>
+</section>
+
 <section id="services">
 <h2>Our Services</h2>
-<div class="grid">
-<div class="card"><i class="fa-solid fa-hotel"></i><h3>Hotel Bookings</h3><p>Exclusive rates for top hotels in Diani and across Kenya.</p></div>
-<div class="card"><i class="fa-solid fa-plane-departure"></i><h3>Holiday Packages</h3><p>Romantic, family & custom travel packages tailored for you.</p></div>
-<div class="card"><i class="fa-solid fa-shuttle-space"></i><h3>Transfers</h3><p>Reliable airport pickups and transport arrangements.</p></div>
-<div class="card"><i class="fa-solid fa-tree-city"></i><h3>Tours & Safaris</h3><p>Curated adventures and Kenyan safari experiences.</p></div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Hotel Bookings</h3>
+<p>Verified hotels, apartments, and luxury resorts at competitive rates.</p>
+</div>
+
+<div class="card">
+<h3>Diani Beach Trips</h3>
+<p>Handpicked beach stays and vacation packages in Diani.</p>
+</div>
+
+<div class="card">
+<h3>Luxury Travel</h3>
+<p>Premium stays and exclusive travel experiences for high-end clients.</p>
+</div>
+
+<div class="card">
+<h3>Corporate Travel</h3>
+<p>Reliable accommodation planning for business trips and group travel.</p>
+</div>
+
 </div>
 </section>
 
-<!-- BOOKING FORM -->
+<section id="gallery">
+<h2>Gallery (Owner uploads photos)</h2>
+
+<input type="file" id="uploader" multiple hidden>
+<button onclick="uploader.click()">Upload Photos</button>
+
+<div class="gallery" id="galleryGrid"></div>
+</section>
+
 <section id="booking">
 <h2>Request Booking</h2>
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
-<input type="text" name="destination" placeholder="Destination / Hotel">
-<input type="text" name="dates" placeholder="Travel Dates">
-<textarea name="requests" placeholder="Special Requests"></textarea>
-<button type="submit">Submit Request</button>
-</form>
+
+<input id="name" placeholder="Your name">
+<input id="location" placeholder="Destination / Hotel">
+<input id="dates" placeholder="Travel dates">
+<button onclick="sendBooking()">Send Booking Request</button>
+
 </section>
 
-<!-- HOTEL GALLERY -->
-<section id="gallery">
-<h2>Hotel Gallery</h2>
-<div class="gallery">
-<div class="hotel-card">Your Hotel Name Here</div>
-<div class="hotel-card">Your Hotel Name Here</div>
-<div class="hotel-card">Your Hotel Name Here</div>
-</div>
-</section>
-
-<!-- CLIENT REVIEWS FORM -->
 <section id="reviews">
-<h2>Write a Review</h2>
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<textarea name="review" placeholder="Write your review here" required></textarea>
-<button type="submit">Submit Review</button>
-</form>
+<h2>Client Reviews</h2>
+
+<textarea id="reviewText" placeholder="Write your review"></textarea>
+<button onclick="addReview()">Submit Review</button>
+
+<div id="reviewsList"></div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" style="text-align:center">
-<h2>Contact</h2>
-<p><b>Phone:</b> +254 723 718279</p>
-<p><b>Email:</b> Kprime.travel.ke@gmail.com</p>
-<p><b>Location:</b> Kenya</p>
+<section id="contact">
+<h2>Contact Us</h2>
+
+<div class="contact-buttons">
+
+<a class="btn whatsapp"
+href="https://wa.me/254723718279?text=Hello%20Kprime%20Travel%20Agency"
+target="_blank">WhatsApp</a>
+
+<a class="btn call"
+href="tel:+254723718279">Call</a>
+
+<a class="btn call"
+href="mailto:Kprime.travel.ke@gmail.com">Email</a>
+
+</div>
+
+<p style="margin-top:20px;">
+Phone: +254 723 718279<br>
+Email: Kprime.travel.ke@gmail.com
+</p>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
-© 2026 KPrime Travel Agency — Premium Travel Services
+© 2026 Kprime Travel Agency — Premium Travel Services
 </footer>
 
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/254723718279">💬</a>
+<script>
+
+/* gallery upload */
+const uploader=document.getElementById("uploader");
+const gallery=document.getElementById("galleryGrid");
+
+uploader.addEventListener("change",()=>{
+[...uploader.files].forEach(file=>{
+const reader=new FileReader();
+reader.onload=e=>{
+const img=document.createElement("img");
+img.src=e.target.result;
+gallery.appendChild(img);
+};
+reader.readAsDataURL(file);
+});
+});
+
+/* reviews */
+function addReview(){
+const text=document.getElementById("reviewText").value.trim();
+if(!text) return;
+const div=document.createElement("div");
+div.className="review";
+div.textContent=text;
+document.getElementById("reviewsList").prepend(div);
+document.getElementById("reviewText").value="";
+}
+
+/* booking -> whatsapp */
+function sendBooking(){
+const name=document.getElementById("name").value;
+const loc=document.getElementById("location").value;
+const dates=document.getElementById("dates").value;
+
+const msg=`Hello Kprime Travel Agency,%0AName: ${name}%0ADestination: ${loc}%0ADates: ${dates}`;
+window.open(`https://wa.me/254723718279?text=${msg}`,'_blank');
+}
+
+</script>
 
 </body>
 </html>
