@@ -38,7 +38,7 @@ footer {background:#0a2a43;color:white;text-align:center;padding:40px 20px;}
 <header>
 <h1>KPrime Travel Agency</h1>
 <p>Luxury hotel bookings, holidays & unforgettable travel experiences</p>
-<a class="btn" href="https://wa.me/2547XXXXXXXX">Book Now on WhatsApp</a>
+<a class="btn" href="https://wa.me/254723718279">Book Now on WhatsApp</a>
 </header>
 
 <section>
@@ -64,8 +64,8 @@ footer {background:#0a2a43;color:white;text-align:center;padding:40px 20px;}
 
 <section style="text-align:center">
 <h2>Contact</h2>
-<p><b>Phone:</b> +254 XXX XXX XXX</p>
-<p><b>Email:</b> info@kprimetravel.com</p>
+<p><b>Phone:</b> +254 723 718279</p>
+<p><b>Email:</b> Kprime.travel.ke@gmail.com</p>
 <p><b>Location:</b> Kenya</p>
 </section>
 
@@ -73,7 +73,7 @@ footer {background:#0a2a43;color:white;text-align:center;padding:40px 20px;}
 © 2026 KPrime Travel Agency — Premium Travel Services
 </footer>
 
-<a class="whatsapp" href="https://wa.me/2547XXXXXXXX">💬</a>
+<a class="whatsapp" href="https://wa.me/254723718279">💬</a>
 
 </body>
 </html>
