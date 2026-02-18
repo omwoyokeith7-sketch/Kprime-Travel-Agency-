@@ -87,3 +87,11 @@
 </footer>
 
 </body>
+<form action="https://formspree.io/f/your_form_id" method="POST">
+  <input type="text" name="name" placeholder="Full Name" required>
+  <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+  <input type="text" name="destination" placeholder="Destination / Hotel">
+  <input type="text" name="dates" placeholder="Travel Dates">
+  <textarea name="requests" placeholder="Special Requests"></textarea>
+  <button type="submit">Submit Booking</button>
+</form>
