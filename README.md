@@ -11,22 +11,24 @@ body {margin:0;font-family:Arial,Helvetica,sans-serif;background:#f4f6fb;color:#
 a {text-decoration:none;}
 h2,h3{margin-bottom:15px;}
 section {padding:70px 20px;max-width:1200px;margin:auto;}
-.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px;}
 
 /* NAVBAR */
 nav {position:fixed;top:0;width:100%;background:white;box-shadow:0 2px 10px rgba(0,0,0,.08);padding:15px 30px;display:flex;justify-content:space-between;align-items:center;z-index:1000;}
 nav b {font-size:20px;color:#0a2a43;}
 nav a {color:#333;margin-left:20px;font-weight:600;transition:.3s;}
 nav a:hover{color:#0f6ea8;}
+.btn-primary {background:#0f6ea8;color:white;padding:10px 20px;border-radius:5px;transition:.3s;}
+.btn-primary:hover{background:#095580;}
+.btn-secondary {background:#555;color:white;padding:10px 20px;border-radius:5px;transition:.3s;}
+.btn-secondary:hover{background:#333;}
 
 /* HERO */
-header {padding:140px 20px 100px;text-align:center;background:linear-gradient(rgba(10,42,67,.7),rgba(10,42,67,.7)),url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');background-size:cover;background-position:center;color:white;}
+header {padding:140px 20px 100px;text-align:center;background:linear-gradient(rgba(10,42,67,.7),rgba(10,42,67,.7)),url('');background-size:cover;background-position:center;color:white;}
 header h1 {font-size:48px;margin-bottom:10px;}
 header p {font-size:20px;opacity:.95;}
-.btn {display:inline-block;margin-top:25px;background:#ffb400;color:black;padding:15px 32px;border-radius:8px;text-decoration:none;font-weight:bold;transition:.3s;}
-.btn:hover{background:#e6a300;color:white;}
 
-/* SERVICE CARDS */
+/* CARDS */
+.grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:25px;}
 .card {background:white;padding:30px;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.07);text-align:center;transition:.3s;}
 .card:hover{transform:translateY(-5px);box-shadow:0 12px 30px rgba(0,0,0,.15);}
 .card i {font-size:36px;color:#0f6ea8;margin-bottom:10px;}
@@ -37,11 +39,9 @@ input,textarea {width:100%;padding:14px;margin:10px 0;border-radius:8px;border:1
 button {background:#0f6ea8;color:white;padding:15px;border:none;width:100%;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer;transition:.3s;}
 button:hover{background:#095580;}
 
-/* FOOTER */
-footer {background:#0a2a43;color:white;text-align:center;padding:40px 20px;}
-
-/* WHATSAPP BUTTON */
-.whatsapp {position:fixed;bottom:18px;right:18px;background:#25D366;color:white;padding:16px 18px;border-radius:50%;font-size:22px;text-decoration:none;box-shadow:0 6px 16px rgba(0,0,0,.3);}
+/* HOTEL GALLERY */
+.gallery {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:30px;}
+.hotel-card {position:relative;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.07);transition:.3s;background:#ddd;height:220px;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:18px;color:#555;}
 
 /* REVIEWS */
 .reviews {background:#f0f4f8;padding:50px 20px;}
@@ -49,12 +49,11 @@ footer {background:#0a2a43;color:white;text-align:center;padding:40px 20px;}
 .review-card p{font-style:italic;}
 .review-card b{display:block;margin-bottom:8px;color:#0f6ea8;}
 
-/* HOTEL GALLERY */
-.gallery {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:30px;}
-.hotel-card {position:relative;border-radius:12px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.07);transition:.3s;}
-.hotel-card img{width:100%;height:220px;object-fit:cover;transition:.3s;}
-.hotel-card:hover img{transform:scale(1.05);}
-.hotel-card .hotel-info{position:absolute;bottom:0;background:rgba(0,0,0,.5);color:white;width:100%;padding:10px;text-align:center;font-weight:bold;}
+/* FOOTER */
+footer {background:#0a2a43;color:white;text-align:center;padding:40px 20px;}
+
+/* WHATSAPP BUTTON */
+.whatsapp {position:fixed;bottom:18px;right:18px;background:#25D366;color:white;padding:16px 18px;border-radius:50%;font-size:22px;text-decoration:none;box-shadow:0 6px 16px rgba(0,0,0,.3);}
 
 /* RESPONSIVE */
 @media(max-width:768px){header h1{font-size:36px;}nav{flex-direction:column;gap:10px;}}
@@ -69,17 +68,18 @@ footer {background:#0a2a43;color:white;text-align:center;padding:40px 20px;}
 <a href="#services">Services</a>
 <a href="#booking">Booking</a>
 <a href="#gallery">Hotels</a>
+<a href="#reviews">Reviews</a>
 <a href="#contact">Contact</a>
 </div>
-<a class="btn" href="https://wa.me/254723718279">WhatsApp</a>
+<a class="btn-primary" href="https://wa.me/254723718279"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
 </nav>
 
 <!-- HERO -->
 <header>
 <h1>KPrime Travel Agency</h1>
 <p>Luxury hotel bookings, holidays & unforgettable travel experiences</p>
-<a class="btn" href="https://wa.me/254723718279">Book Now on WhatsApp</a>
-<a class="btn" href="mailto:Kprime.travel.ke@gmail.com">Email Us</a>
+<a class="btn-primary" href="https://wa.me/254723718279">Book Now on WhatsApp</a>
+<a class="btn-secondary" href="mailto:Kprime.travel.ke@gmail.com">Email Us</a>
 </header>
 
 <!-- SERVICES -->
@@ -108,38 +108,22 @@ footer {background:#0a2a43;color:white;text-align:center;padding:40px 20px;}
 
 <!-- HOTEL GALLERY -->
 <section id="gallery">
-<h2>Featured Hotels</h2>
+<h2>Hotel Gallery</h2>
 <div class="gallery">
-<div class="hotel-card">
-<img src="https://images.unsplash.com/photo-1582719478181-7e49b8e744c3" alt="Hotel 1">
-<div class="hotel-info">Hotel Ocean View</div>
-</div>
-<div class="hotel-card">
-<img src="https://images.unsplash.com/photo-1560347876-aeef00ee58a1" alt="Hotel 2">
-<div class="hotel-info">Sunset Paradise Hotel</div>
-</div>
-<div class="hotel-card">
-<img src="https://images.unsplash.com/photo-1501117716987-c8d8b3e0d0c6" alt="Hotel 3">
-<div class="hotel-info">Savannah Safari Lodge</div>
-</div>
+<div class="hotel-card">Your Hotel Name Here</div>
+<div class="hotel-card">Your Hotel Name Here</div>
+<div class="hotel-card">Your Hotel Name Here</div>
 </div>
 </section>
 
-<!-- REVIEWS -->
-<section class="reviews">
-<h2>Client Reviews</h2>
-<div class="review-card">
-<b>Jane M.</b>
-<p>"KPrime Travel made our honeymoon unforgettable! Highly recommend their packages."</p>
-</div>
-<div class="review-card">
-<b>John D.</b>
-<p>"Excellent service, seamless booking and fantastic hotel choices."</p>
-</div>
-<div class="review-card">
-<b>Sophia K.</b>
-<p>"We had a family safari trip arranged by KPrime, everything went perfect!"</p>
-</div>
+<!-- CLIENT REVIEWS FORM -->
+<section id="reviews">
+<h2>Write a Review</h2>
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<textarea name="review" placeholder="Write your review here" required></textarea>
+<button type="submit">Submit Review</button>
+</form>
 </section>
 
 <!-- CONTACT -->
